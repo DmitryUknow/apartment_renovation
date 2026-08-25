@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#173f38">
+  <title>Кварцвинил в квартире — памятка</title>
+  <style>
+    :root{
+      --bg:#f4f2ed;--paper:#fff;--ink:#202622;--muted:#66706a;--line:#dcded8;
+      --green:#173f38;--green2:#28675a;--mint:#e5f1ec;--sand:#f1e5ce;
+      --amber:#9a5b00;--red:#a4382c;--shadow:0 7px 24px rgba(26,47,40,.07)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+    body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.52 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit}.wrap{width:min(100% - 28px,980px);margin:auto}
+    header{color:#fff;background:linear-gradient(135deg,#102f2a,#28675a);padding:38px 0 32px}
+    .eyebrow{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:#bcd8cf;font-weight:800}
+    h1{font-size:clamp(30px,7vw,48px);line-height:1.04;margin:8px 0 13px;max-width:780px}
+    header p{margin:0;max-width:740px;color:#d8e8e2;font-size:16px}
+    .topline{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.pill{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 10px;font-size:12px;color:#e9f4f0}
+    nav{position:sticky;top:0;z-index:10;background:rgba(244,242,237,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);overflow:auto;white-space:nowrap}
+    nav .wrap{display:flex;gap:7px;padding:10px 0}nav a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:13px;font-weight:700}
+    main{padding:20px 0 60px}.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:14px}
+    .card,details{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+    .card{padding:19px}.verdict{border-left:5px solid var(--green2)}
+    h2{font-size:22px;line-height:1.2;margin:0 0 13px}h3{font-size:17px;line-height:1.25;margin:19px 0 8px}
+    p{margin:8px 0}.muted{color:var(--muted)}.big{font-size:18px;font-weight:800;color:var(--green)}
+    .metric{background:var(--mint);border-radius:13px;padding:14px}.metric strong{display:block;font-size:25px;color:var(--green)}
+    .warning{background:#fff5e5;border:1px solid #ead1a2;color:#6d470d;border-radius:13px;padding:13px;margin-top:13px}
+    .danger{background:#fdecea;border:1px solid #ecc6c1;color:#743229;border-radius:13px;padding:13px;margin-top:13px}
+    section{margin-top:18px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:25px 2px 10px}.section-title p{color:var(--muted);margin:0;font-size:13px}
+    details{margin:10px 0;overflow:hidden;box-shadow:none}summary{list-style:none;cursor:pointer;padding:16px 17px;font-size:17px;font-weight:800;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    summary::-webkit-details-marker{display:none}summary::after{content:'+';font-size:24px;line-height:1;color:var(--green2)}details[open] summary::after{content:'–'}
+    .detail-body{border-top:1px solid var(--line);padding:5px 17px 17px}
+    ul,ol{padding-left:22px;margin:9px 0}li{margin:6px 0}.ticks{list-style:none;padding:0}.ticks li{position:relative;padding-left:27px}.ticks li::before{content:'✓';position:absolute;left:0;top:0;color:var(--green2);font-weight:900}
+    .cross{list-style:none;padding:0}.cross li{position:relative;padding-left:27px}.cross li::before{content:'×';position:absolute;left:2px;color:var(--red);font-weight:900;font-size:19px}
+    table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;vertical-align:top;padding:10px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:12px 0}.step{background:var(--mint);padding:11px;border-radius:11px;font-size:12px;font-weight:750;position:relative}.step:not(:last-child)::after{content:'→';position:absolute;right:-8px;top:50%;transform:translateY(-50%);z-index:2;color:var(--green2)}
+    .calc{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.field label{display:block;color:var(--muted);font-size:12px;font-weight:700;margin-bottom:4px}.field input{width:100%;font:inherit;padding:11px;border:1px solid var(--line);border-radius:10px;background:#fff}.result{grid-column:1/-1;background:var(--green);color:#fff;padding:15px;border-radius:12px}.result strong{font-size:22px}
+    .checklist label{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #eceeea}.checklist label:last-child{border:0}.checklist input{width:20px;height:20px;accent-color:var(--green2);flex:none}.checklist input:checked+span{text-decoration:line-through;color:var(--muted)}
+    .sources a{display:block;color:var(--green2);margin:7px 0;overflow-wrap:anywhere}
+    footer{color:var(--muted);font-size:12px;margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
+    @media(max-width:720px){.hero-grid{grid-template-columns:1fr}.calc{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr}.step:not(:last-child)::after{content:'↓';top:auto;bottom:-13px;right:50%;transform:translateX(50%)}table{display:block;overflow:auto}.wrap{width:min(100% - 22px,980px)}header{padding:29px 0 26px}.card{padding:16px}}
+    @media(max-width:430px){.calc{grid-template-columns:1fr}.result{grid-column:1}nav a{padding:7px 10px}.section-title{display:block}}
+    .app-tabs{position:fixed;z-index:1000;left:50%;bottom:0;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,1fr);width:min(100%,560px);padding:6px 8px calc(6px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0;box-shadow:0 -6px 24px rgba(23,63,56,.13);backdrop-filter:blur(14px)}.app-tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;padding:6px 2px;color:var(--muted);text-decoration:none;border-radius:11px;font-size:10px;font-weight:750;line-height:1.1}.app-tabs a::before{font-size:20px;line-height:1}.app-tabs a:nth-child(1)::before{content:'🧰'}.app-tabs a:nth-child(2)::before{content:'🚪'}.app-tabs a:nth-child(3)::before{content:'▦'}.app-tabs a:nth-child(4)::before{content:'♨'}.app-tabs a[aria-current=page]{color:var(--green);background:var(--mint)}body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+    @media print{nav{display:none}body{background:#fff;padding-bottom:0}.card,details{box-shadow:none}details>.detail-body{display:block!important}header{padding:20px 0}main{padding-top:10px}}
+    .app-tabs{top:auto;overflow:visible;white-space:normal}
+  </style>
+</head>
+<body>
+<nav class="app-tabs" aria-label="Разделы квартиры"><a href="index.html">Инструменты</a><a href="doors-guide.html">Двери</a><a href="kvarcvinil-guide.html" aria-current="page">Кварцвинил</a><a href="teplyi-pol-vysoty.html">Уровни пола</a></nav>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Памятка по вашей квартире</div>
+    <h1>Кварцвинил вместо части ламината</h1>
+    <p>Кухня‑гостиная и прихожая меняются, коридор 5,6 м² и комнаты остаются с существующим ламинатом. Главная задача — выровнять основание и попасть в высоту сохранённого пола.</p>
+    <div class="topline"><span class="pill">Ориентировочно 27,3 м²</span><span class="pill">Мебели пока нет</span><span class="pill">Ламинат 8 мм / AC4 / 32 класс</span></div>
+  </div>
+</header>
+<nav><div class="wrap"><a href="#decision">Решение</a><a href="#types">Материалы</a><a href="#level">Выравнивание</a><a href="#height">Высота</a><a href="#spc">Риски SPC</a><a href="#buy">Покупка</a><a href="#work">Работы</a></div></nav>
+
+<main class="wrap">
+  <section id="decision" class="hero-grid">
+    <article class="card verdict">
+      <h2>Рекомендуемая конструкция</h2>
+      <p class="big">Клеевой LVT 2,5–3 мм на сплошном цементном ровнителе</p>
+      <ul class="ticks">
+        <li>Основанием и ровнителем вывести точную высоту возле оставшегося ламината.</li>
+        <li>Кухню и встроенные шкафы можно ставить поверх приклеенного покрытия.</li>
+        <li>Кухня‑гостиная и прихожая могут быть отдельными зонами из-за сохранённого коридора 5,6 м².</li>
+        <li>На переходах оставить компенсационный зазор ламината и закрыть его металлическим профилем.</li>
+      </ul>
+      <div class="warning"><strong>Не покупать покрытие до вскрытия пола.</strong> Сначала измерить фактическую подложку, перепады стяжки и отметки во всех переходах.</div>
+    </article>
+    <aside class="card">
+      <div class="metric"><span>Площадь замены*</span><strong>≈ 27,3 м²</strong><small>17,1 кухня‑гостиная + 10,2 прихожая/входная зона</small></div>
+      <h3>Запас материала</h3>
+      <p><strong>5–7%</strong> при прямой раскладке; <strong>10–15%</strong> при сложной раскладке или «ёлочке».</p>
+      <p class="muted">*По подписям на схеме. Итог — только после обмера.</p>
+    </aside>
+  </section>
+
+  <section id="types">
+    <div class="section-title"><h2>Какой кварцвинил выбирать</h2><p>Сначала конструкция, потом декор</p></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Тип</th><th>Что это</th><th>Плюсы</th><th>Ограничения</th><th>Для вас</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Клеевой LVT/LVP</strong></td><td>Гибкие планки 2–3 мм, полностью приклеиваются</td><td>Тихий, стабильный, ремонтопригодный, можно под кухню</td><td>Требует идеально подготовленного основания; без подложки</td><td><strong>Лучший капитальный вариант</strong></td></tr>
+          <tr><td><strong>SPC 34 класса</strong></td><td>Жёсткая минерально‑полимерная плита с замками</td><td>Быстрый монтаж, вода не разбухает, не показывает мелкую шероховатость</td><td>Плавающий; замки страдают на ямах; кухней не зажимать</td><td>Хороший вариант, если нужен монтаж без клея</td></tr>
+          <tr><td><strong>Rigid ABA</strong></td><td>SPC‑сердцевина между более эластичными слоями</td><td>Может быть менее гулким и хрупким</td><td>ABA не единый стандарт; всё равно плавающий</td><td>Смотреть только по техпаспорту</td></tr>
+          <tr><td><strong>MSPC</strong></td><td>Чаще SPC с меламиновой поверхностью; термин неоднозначен</td><td>Повышенная стойкость к царапинам</td><td>Возможны сколы и расслоение; составы различаются</td><td>Не брать без разреза и документов</td></tr>
+          <tr><td><strong>WPC</strong></td><td>Вспененная полимерная сердцевина</td><td>Теплее, мягче, тише</td><td>Сильнее продавливается, остаётся плавающим</td><td>Комфортный, но не главный кандидат для прихожей</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="level">
+    <div class="section-title"><h2>Как выровнять основание</h2><p>Подложка неровность не исправляет</p></div>
+    <div class="flow"><div class="step">1. Снять ламинат и подложку</div><div class="step">2. Лазерная карта и рейка 2 м</div><div class="step">3. Ремонт трещин и шлифовка бугров</div><div class="step">4. Грунт и сплошной ровнитель</div><div class="step">5. Сушка, рейка, влажность, LVT</div></div>
+    <details open><summary>Как именно заливают ровнитель</summary><div class="detail-body">
+      <ol>
+        <li><strong>Герметичные отсечки.</strong> В проёмах возле сохранённого коридора ставят временные бортики, чтобы смесь не затекла под ламинат.</li>
+        <li><strong>Целевая отметка.</strong> Лазером задают высоту верха ровнителя: верх ламината минус толщина LVT и клея.</li>
+        <li><strong>Подготовка.</strong> Удаляют слабые и бухтящие участки, ремонтируют трещины, сошлифовывают выступы и тщательно пылесосят.</li>
+        <li><strong>Грунтование.</strong> Используют грунт из совместимой системы ровнителя, выдерживают указанное время.</li>
+        <li><strong>Непрерывные замесы.</strong> Воду дозируют строго по инструкции. Для 17 м² нужны 2–3 человека: замес, подача, распределение.</li>
+        <li><strong>Распределение.</strong> Смесь разгоняют раклей до реперов, соседние порции соединяют «мокрым по мокрому», прокатывают игольчатым валиком.</li>
+        <li><strong>Приёмка.</strong> После полного высыхания проверяют рейкой, шлифуют наплывы, пылесосят и измеряют остаточную влажность.</li>
+      </ol>
+      <div class="danger"><strong>Нельзя:</strong> добавлять воду «для текучести», лить на пыль или слабую стяжку, набирать высоту плиточным клеем, укладывать винил сразу после того, как по полу стало можно ходить.</div>
+    </div></details>
+    <details><summary>Как выбрать тип ровнителя</summary><div class="detail-body">
+      <ul>
+        <li>Отдельные бугры — алмазная шлифовка.</li>
+        <li>Несколько небольших ям — локальный ремонтный состав.</li>
+        <li>Перепады примерно 3–10 мм — сплошной цементный самонивелирующийся ровнитель.</li>
+        <li>Перепады больше 10–20 мм — базовый толстослойный состав, затем финишный слой.</li>
+        <li>Слабая, крошащаяся или бухтящая стяжка — удалить непрочные участки; поверх них не заливать.</li>
+      </ul>
+      <p>На мешке должно быть прямо указано: допустимая толщина, применение под ПВХ/LVT и совместимость с вашим основанием и тёплым полом.</p>
+    </div></details>
+  </section>
+
+  <section id="height">
+    <div class="section-title"><h2>Калькулятор высоты и смеси</h2><p>Предварительная оценка, не замена лазерному обмеру</p></div>
+    <div class="card calc">
+      <div class="field"><label for="old">Ламинат + подложка, мм</label><input id="old" type="number" min="0" step="0.1" value="10.5"></div>
+      <div class="field"><label for="finish">LVT + клей, мм</label><input id="finish" type="number" min="0" step="0.1" value="2.8"></div>
+      <div class="field"><label for="area">Площадь, м²</label><input id="area" type="number" min="0" step="0.1" value="27.3"></div>
+      <div class="field"><label for="avg">Средний слой ровнителя, мм</label><input id="avg" type="number" min="0" step="0.1" value="7.7"></div>
+      <div class="field"><label for="rate">Расход смеси, кг/м²/мм</label><input id="rate" type="number" min="0" step="0.01" value="1.6"></div>
+      <div class="field"><label for="bag">Вес мешка, кг</label><input id="bag" type="number" min="1" step="1" value="25"></div>
+      <div class="result">Целевая толщина у ровной стяжки: <strong id="lift">7,7 мм</strong><br>Ориентировочно смеси: <strong id="mix">337 кг / 14 мешков</strong><br><small>Количество считается по средней толщине. Добавьте технологический запас по рекомендации мастера и производителя.</small></div>
+    </div>
+  </section>
+
+  <section id="spc">
+    <div class="section-title"><h2>Если всё-таки выбрать SPC 34</h2><p>Класс не отменяет монтажные риски</p></div>
+    <details open><summary>Основные риски</summary><div class="detail-body">
+      <ul class="cross">
+        <li>На ямах планка прогибается, хрустит и разрушает торцевые замки.</li>
+        <li>Кухня, остров или шкаф могут заблокировать плавающий пол и вызвать поднятие или раскрытие швов.</li>
+        <li>Солнце и локальный перегрев способны деформировать покрытие.</li>
+        <li>Вода не разрушит сам SPC, но может попасть под него и долго не высыхать.</li>
+        <li>Толстая мягкая подложка усиливает прогиб и нагрузку на замки.</li>
+        <li>SPC может оказаться гулким; высокий класс относится к нагрузке, а не к акустике.</li>
+      </ul>
+    </div></details>
+    <details><summary>Безопасная спецификация SPC</summary><div class="detail-body">
+      <ul class="ticks">
+        <li>Класс 34 подтверждён техпаспортом, а не только ценником.</li>
+        <li>Защитный слой около 0,5–0,55 мм.</li>
+        <li>Общая толщина ориентировочно 5–6,5 мм с заводской IXPE-подложкой.</li>
+        <li>Указаны допуск ровности, площадь единого контура и температурный режим.</li>
+        <li>Есть понятная гарантия на замки и русскоязычная инструкция.</li>
+        <li>Кухня устанавливается до пола или SPC обходит её с компенсационным зазором.</li>
+      </ul>
+    </div></details>
+  </section>
+
+  <section id="buy">
+    <div class="section-title"><h2>Чек‑лист перед покупкой</h2><p>Отметки сохраняются на этом устройстве</p></div>
+    <div class="card checklist" id="buyList">
+      <label><input type="checkbox"><span>Ламинат и подложка сняты хотя бы в контрольных местах.</span></label>
+      <label><input type="checkbox"><span>Составлена лазерная карта высот обеих заменяемых зон.</span></label>
+      <label><input type="checkbox"><span>Стяжка проверена двухметровой рейкой и простукиванием.</span></label>
+      <label><input type="checkbox"><span>Измерена высота сохранённого ламината у каждого перехода.</span></label>
+      <label><input type="checkbox"><span>Выбрана окончательная толщина покрытия и рассчитан уровень ровнителя.</span></label>
+      <label><input type="checkbox"><span>Есть техпаспорт, инструкция, документы по эмиссии и пожарным характеристикам.</span></label>
+      <label><input type="checkbox"><span>Уточнены защитный слой, партия, запас и правила тёплого пола.</span></label>
+      <label><input type="checkbox"><span>Выбраны профили для переходов к коридору и комнатам.</span></label>
+      <label><input type="checkbox"><span>Согласована последовательность пола, кухни, дверей и плинтусов.</span></label>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="section-title"><h2>Что записать в задание мастеру</h2><p>Короткая формулировка</p></div>
+    <div class="card">
+      <p>«Демонтировать ламинат и подложку в согласованных зонах, сохранить коридор 5,6 м² и покрытия комнат. Сделать карту высот, отремонтировать основание, сошлифовать бугры и залить цементный ровнитель до отметки, при которой готовый кварцвинил совпадёт по высоте с сохранённым ламинатом. После высыхания принять основание двухметровой рейкой и измерить влажность. Переходы выполнить профилями, не зажимая плавающий ламинат».</p>
+      <h3>Что принять до оплаты</h3>
+      <ul class="ticks"><li>Нет качания, хруста, поднятых краёв и открытых стыков.</li><li>Переходы находятся на согласованных линиях и не имеют опасной ступеньки.</li><li>Ламинат имеет скрытый профилем компенсационный зазор.</li><li>Плинтусы и профили не зажимают плавающий пол.</li><li>Сохранены упаковочные этикетки и ремонтный запас покрытия.</li></ul>
+    </div>
+  </section>
+
+  <section class="sources">
+    <details><summary>Полезные технические источники</summary><div class="detail-body">
+      <a href="https://rfci.com/rigid-core/">RFCI: классификация жёстких SPC/WPC покрытий</a>
+      <a href="https://int.quick-step.com/en/frequently-asked-questions/vinyl/preparation-and-installation/how-to-prepare-the-subfloor-for-your-vinyl-floor">Quick-Step: подготовка основания под винил</a>
+      <a href="https://int.quick-step.com/en/frequently-asked-questions/vinyl/general/can-i-use-quick-step-vinyl-in-combination-with-underfloor-heating-or-cooling">Quick-Step: винил и тёплый пол</a>
+      <a href="https://pro.moduleo.com/-/media/ee7f3ffff58858cc957a966ebd4b2993.ashx?filename=MOD_Installation_LVT_FlexClick_UC-UD_EN.pdf&mode=inline">Moduleo: требования к основанию и монтажу LVT</a>
+      <p class="muted">Инструкция конкретной коллекции всегда имеет приоритет над общими рекомендациями этой памятки.</p>
+    </div></details>
+  </section>
+  <footer>Версия памятки: август 2026. Расчёты ориентировочные; итоговые толщины и влажность определяются после демонтажа и инструментального обследования.</footer>
+</main>
+
+<script>
+  const ids=['old','finish','area','avg','rate','bag'];
+  const n=id=>Math.max(0,Number(document.getElementById(id).value)||0);
+  function recalc(){
+    const lift=Math.max(0,n('old')-n('finish'));
+    const kg=n('area')*n('avg')*n('rate');
+    const bags=n('bag')?Math.ceil(kg/n('bag')):0;
+    document.getElementById('lift').textContent=lift.toLocaleString('ru-RU',{maximumFractionDigits:1})+' мм';
+    document.getElementById('mix').textContent=Math.ceil(kg).toLocaleString('ru-RU')+' кг / '+bags+' мешков';
+  }
+  ids.forEach(id=>document.getElementById(id).addEventListener('input',recalc));recalc();
+  const checks=[...document.querySelectorAll('#buyList input')],key='kvarcvinil-guide-checks-v1';
+  const saved=JSON.parse(localStorage.getItem(key)||'[]');checks.forEach((c,i)=>{c.checked=!!saved[i];c.addEventListener('change',()=>localStorage.setItem(key,JSON.stringify(checks.map(x=>x.checked))))});
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Инструменты для ремонта — чек-лист</title>
   <style>
     :root { --bg:#f5f3ee; --card:#fff; --ink:#25231f; --muted:#716d65; --line:#dedad1; --accent:#285c4d; --accent2:#dcebe4; --p1:#b33a2b; --p2:#aa6a09; --p3:#587069; }
@@ -23,10 +23,13 @@
     .badge{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.025em;border-radius:999px;padding:4px 8px;text-align:center;white-space:nowrap}.p1{color:var(--p1);background:#f8e4e0}.p2{color:var(--p2);background:#fff0d3}.p3{color:var(--p3);background:#e8eeec}
     .note{margin:0;padding:13px 18px;background:#f2f7f4;color:#40574f;font-size:13px;border-top:1px solid #dce8e2}.empty{display:none;text-align:center;color:var(--muted);padding:35px}
     @media(max-width:760px){.tools{grid-template-columns:1fr 1fr}.tools input{grid-column:1/-1}.summary{grid-template-columns:1fr}.count{font-size:18px}label.item{grid-template-columns:24px 1fr auto}.use{grid-column:2/-1}.badge{grid-column:3;grid-row:1}.toolbar{position:static}}
-    @media print{header{padding:20px}.toolbar{display:none}body{background:#fff}main{padding:12px}details{break-inside:avoid}details:not([open])>.items{display:block}summary{padding:10px 12px}label.item{padding:7px 12px}.note{padding:8px 12px}}
+    .app-tabs{position:fixed;z-index:1000;left:50%;bottom:0;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,1fr);width:min(100%,560px);padding:6px 8px calc(6px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0;box-shadow:0 -6px 24px rgba(23,63,56,.13);backdrop-filter:blur(14px)}.app-tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;padding:6px 2px;color:var(--muted);text-decoration:none;border-radius:11px;font-size:10px;font-weight:750;line-height:1.1}.app-tabs a::before{font-size:20px;line-height:1}.app-tabs a:nth-child(1)::before{content:'🧰'}.app-tabs a:nth-child(2)::before{content:'🚪'}.app-tabs a:nth-child(3)::before{content:'▦'}.app-tabs a:nth-child(4)::before{content:'♨'}.app-tabs a[aria-current=page]{color:var(--accent);background:var(--accent2)}body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+    @media print{header{padding:20px}.toolbar,.app-tabs{display:none}body{background:#fff;padding-bottom:0}main{padding:12px}details{break-inside:avoid}details:not([open])>.items{display:block}summary{padding:10px 12px}label.item{padding:7px 12px}.note{padding:8px 12px}}
+    .app-tabs{top:auto;overflow:visible;white-space:normal}
   </style>
 </head>
 <body>
+<nav class="app-tabs" aria-label="Разделы квартиры"><a href="index.html" aria-current="page">Инструменты</a><a href="doors-guide.html">Двери</a><a href="kvarcvinil-guide.html">Кварцвинил</a><a href="teplyi-pol-vysoty.html">Уровни пола</a></nav>
 <header><div class="wrap"><h1>Инструменты для ремонта</h1><p>Чек-лист для квартиры: отмечайте то, что уже есть. Состояние сохраняется автоматически только на этом устройстве.</p></div></header>
 <div class="toolbar"><div class="tools">
   <input id="search" type="search" placeholder="Найти инструмент или работу…">

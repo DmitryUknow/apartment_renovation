@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#173f38">
+  <title>Полы квартиры: высоты, кварцвинил, плитка и тёплый пол</title>
+  <style>
+    :root{--bg:#f3f1ec;--paper:#fff;--ink:#202622;--muted:#68716c;--line:#d9ddd7;--green:#173f38;--green2:#287060;--mint:#e4f0eb;--amber:#9a5b00;--sand:#fff4df;--red:#9d3e32;--shadow:0 8px 24px rgba(25,48,40,.07)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:68px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.52 system-ui,-apple-system,"Segoe UI",sans-serif}
+    .wrap{width:min(100% - 26px,980px);margin:auto}header{padding:34px 0 29px;color:#fff;background:linear-gradient(135deg,#102f2a,#287060)}
+    .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:#bddbd2;font-weight:800}h1{font-size:clamp(29px,7vw,48px);line-height:1.05;margin:7px 0 12px;max-width:850px}header p{max-width:760px;color:#d9ebe5;margin:0;font-size:16px}
+    .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:19px}.pill{padding:7px 10px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:12px}
+    nav{position:sticky;top:0;z-index:10;background:rgba(243,241,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);overflow:auto;white-space:nowrap}nav .wrap{display:flex;gap:7px;padding:9px 0}nav a{color:var(--ink);text-decoration:none;background:#fff;border:1px solid var(--line);padding:7px 10px;border-radius:999px;font-size:13px;font-weight:750}
+    main{padding:19px 0 58px}.grid{display:grid;grid-template-columns:1.35fr .65fr;gap:13px}.card,details{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.card{padding:18px}.verdict{border-left:5px solid var(--green2)}
+    h2{font-size:22px;line-height:1.2;margin:0 0 12px}h3{font-size:17px;margin:19px 0 7px}p{margin:8px 0}.muted{color:var(--muted)}.big{font-size:18px;font-weight:850;color:var(--green)}
+    .metric{background:var(--mint);border-radius:13px;padding:14px}.metric strong{display:block;font-size:25px;color:var(--green)}.warning{background:var(--sand);border:1px solid #ead2a6;border-radius:13px;padding:13px;color:#70480c;margin-top:11px}.danger{background:#fdecea;border:1px solid #ecc8c2;color:#74352d;border-radius:13px;padding:13px;margin-top:11px}
+    section{margin-top:18px}.section-title{margin:25px 2px 10px}.section-title p{color:var(--muted);font-size:13px;margin:3px 0}details{margin:9px 0;box-shadow:none;overflow:hidden}summary{list-style:none;cursor:pointer;padding:15px 17px;font-weight:800;font-size:17px;display:flex;justify-content:space-between;gap:10px}summary::-webkit-details-marker{display:none}summary::after{content:'+';font-size:23px;color:var(--green2)}details[open] summary::after{content:'–'}.body{border-top:1px solid var(--line);padding:6px 17px 17px}
+    ul,ol{padding-left:22px;margin:9px 0}li{margin:6px 0}.ticks{list-style:none;padding:0}.ticks li{position:relative;padding-left:26px}.ticks li::before{content:'✓';position:absolute;left:0;color:var(--green2);font-weight:900}.no{list-style:none;padding:0}.no li{position:relative;padding-left:26px}.no li::before{content:'×';position:absolute;left:2px;color:var(--red);font-weight:900;font-size:18px}
+    table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:9px 8px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.step{background:var(--mint);border-radius:11px;padding:11px;font-size:12px;font-weight:750;position:relative}.step:not(:last-child)::after{content:'→';position:absolute;right:-8px;top:50%;z-index:2;color:var(--green2)}
+    .calc{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.field label{display:block;color:var(--muted);font-size:12px;font-weight:750;margin-bottom:4px}.field input,.field select{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px;background:#fff;color:var(--ink);font:inherit}.result{grid-column:1/-1;background:var(--green);color:#fff;padding:15px;border-radius:12px}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.result strong{display:block;font-size:22px}.result small{color:#cfe2dc}.status{grid-column:1/-1;padding-top:10px;border-top:1px solid rgba(255,255,255,.18)}
+    .check label{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #eceeea}.check input{width:20px;height:20px;flex:none;accent-color:var(--green2)}.check input:checked+span{text-decoration:line-through;color:var(--muted)}.links a{display:block;color:var(--green2);margin:8px 0;overflow-wrap:anywhere}code{background:#eef1ee;padding:2px 5px;border-radius:5px}footer{color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:15px;margin-top:24px}
+    @media(max-width:720px){.grid{grid-template-columns:1fr}.calc{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr}.step:not(:last-child)::after{content:'↓';right:50%;top:auto;bottom:-13px}.wrap{width:min(100% - 20px,980px)}table{display:block;overflow:auto}.card{padding:15px}}
+    @media(max-width:440px){.calc,.result-grid{grid-template-columns:1fr}.result{grid-column:1}.status{grid-column:1}nav a{padding:7px 9px}}
+    .app-tabs{position:fixed;z-index:1000;left:50%;bottom:0;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,1fr);width:min(100%,560px);padding:6px 8px calc(6px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0;box-shadow:0 -6px 24px rgba(23,63,56,.13);backdrop-filter:blur(14px)}.app-tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;padding:6px 2px;color:var(--muted);text-decoration:none;border-radius:11px;font-size:10px;font-weight:750;line-height:1.1}.app-tabs a::before{font-size:20px;line-height:1}.app-tabs a:nth-child(1)::before{content:'🧰'}.app-tabs a:nth-child(2)::before{content:'🚪'}.app-tabs a:nth-child(3)::before{content:'▦'}.app-tabs a:nth-child(4)::before{content:'♨'}.app-tabs a[aria-current=page]{color:var(--green);background:var(--mint)}body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+    @media print{nav{display:none}body{background:#fff;padding-bottom:0}.card,details{box-shadow:none}header{padding:20px 0}details>.body{display:block!important}}
+    .app-tabs{top:auto;overflow:visible;white-space:normal}
+  </style>
+</head>
+<body>
+<nav class="app-tabs" aria-label="Разделы квартиры"><a href="index.html">Инструменты</a><a href="doors-guide.html">Двери</a><a href="kvarcvinil-guide.html">Кварцвинил</a><a href="teplyi-pol-vysoty.html" aria-current="page">Уровни пола</a></nav>
+<header><div class="wrap">
+  <div class="eyebrow">Памятка для вашей квартиры</div>
+  <h1>Как свести ламинат, кварцвинил и тёплую плитку в один уровень</h1>
+  <p>Готовая схема принятия решений, замеры лазером и калькулятор толщин. Все расчёты ведутся от верха сохранённого ламината, а не от условно ровной стяжки.</p>
+  <div class="pills"><span class="pill">Ламинат 8 мм + подложка</span><span class="pill">Коридор: кварцвинил</span><span class="pill">Прихожая: мат + плитка</span></div>
+</div></header>
+<nav><div class="wrap"><a href="#answer">Решение</a><a href="#measure">Замеры</a><a href="#calc">Калькулятор</a><a href="#layers">Пироги</a><a href="#install">Монтаж</a><a href="#check">Чек-лист</a></div></nav>
+<main class="wrap">
+  <section id="answer" class="grid">
+    <article class="card verdict"><h2>Короткий ответ</h2><p class="big">Здоровую стяжку целиком не снимают.</p><p>Для тёплого пола обычно делают только штробу под сменный датчик в гофротрубке, холодный провод и более толстую соединительную муфту. Локальное понижение стяжки требуется лишь тогда, когда расчёт показывает, что плиточный пирог выше сохранённого пола.</p><div class="warning"><strong>Главное:</strong> сначала выберите конкретные покрытия и смеси, затем снимите лазерные отметки. Покупать ровнитель «по средней толщине» до этого нельзя.</div></article>
+    <aside class="card"><div class="metric"><span>Предварительный ориентир</span><strong>≈ 11 мм</strong><span>8 мм ламинат + примерно 3 мм подложка, если основания равны</span></div><p class="muted">Это только ориентир. Реальная целевая высота определяется лазером по верху уже уложенного ламината.</p></aside>
+  </section>
+
+  <section id="measure"><div class="section-title"><h2>Как правильно снять высоты</h2><p>Одна горизонтальная плоскость лазера для всех помещений.</p></div>
+    <div class="card"><div class="flow"><div class="step">1. Поставить лазер неподвижно</div><div class="step">2. Замерить верх ламината</div><div class="step">3. Замерить стяжку коридора</div><div class="step">4. Замерить стяжку прихожей</div><div class="step">5. Составить карту точек</div></div>
+      <p><strong>Требуемый подъём</strong> в каждой точке = расстояние от лазера до основания − расстояние от лазера до верха ламината.</p>
+      <p>Пример: верх ламината — 1000 мм от луча, стяжка — 1013 мм. Значит, от стяжки до чистового уровня требуется <strong>13 мм</strong>.</p>
+      <ul><li>Снимайте точки сеткой примерно 0,5–1 м и обязательно у всех стыков.</li><li>Чем меньше расстояние до лазера, тем поверхность выше.</li><li>Отдельно отметьте самую высокую точку: именно там должен сохраняться минимально допустимый слой ровнителя.</li><li>Проверьте запас под дверями, входной дверью и будущими коробками.</li></ul>
+    </div>
+  </section>
+
+  <section id="calc"><div class="section-title"><h2>Калькулятор высот</h2><p>Все значения в миллиметрах. Введённые данные сохраняются на телефоне.</p></div>
+    <div class="card calc">
+      <div class="field"><label for="laserTop">Лазер → верх ламината</label><input id="laserTop" type="number" step="0.1" value="1000"></div>
+      <div class="field"><label for="laserVinyl">Лазер → стяжка коридора</label><input id="laserVinyl" type="number" step="0.1" value="1013"></div>
+      <div class="field"><label for="laserTile">Лазер → стяжка прихожей</label><input id="laserTile" type="number" step="0.1" value="1015"></div>
+      <div class="field"><label for="vinyl">Толщина кварцвинила</label><input id="vinyl" type="number" min="0" step="0.1" value="3"></div>
+      <div class="field"><label for="vinylGlue">Клей / разрешённая подложка</label><input id="vinylGlue" type="number" min="0" step="0.1" value="1"></div>
+      <div class="field"><label for="vinylExtra">Другие слои над ровнителем</label><input id="vinylExtra" type="number" min="0" step="0.1" value="0"></div>
+      <div class="field"><label for="tile">Толщина плитки</label><input id="tile" type="number" min="0" step="0.1" value="8"></div>
+      <div class="field"><label for="matGlue">Общий клей с утопленным матом</label><input id="matGlue" type="number" min="0" step="0.1" value="5"></div>
+      <div class="field"><label for="tileExtra">Другие слои под матом</label><input id="tileExtra" type="number" min="0" step="0.1" value="0"></div>
+      <div class="result"><div class="result-grid"><div><small>Ровнитель под кварцвинил</small><strong id="vinylResult">9 мм</strong></div><div><small>Ровнитель / выборка под плитку</small><strong id="tileResult">2 мм</strong></div><div class="status" id="status">Результат показывает номинальную толщину в измеренной точке. Проверьте минимальный слой выбранного состава по самой высокой точке.</div></div></div>
+    </div>
+    <div class="warning"><strong>Важно:</strong> высота зуба шпателя не равна итоговой толщине клея. Для плитки мат обычно находится внутри общего клеевого слоя: не складывайте автоматически «мат 4 мм + клей 5 мм».</div>
+  </section>
+
+  <section id="layers"><div class="section-title"><h2>Три зоны пола</h2></div>
+    <details open><summary>Сохранённый ламинат — эталон</summary><div class="body"><p><strong>8 мм ламинат + фактическая подложка.</strong> Если подложка 3 мм и основания равны, верх находится примерно в 11 мм над стяжкой. Однако лазерная отметка готового верха важнее этого сложения.</p></div></details>
+    <details open><summary>Коридор — кварцвинил</summary><div class="body"><table><tr><th>Вариант</th><th>Пример пирога над ровнителем</th><th>Нюанс</th></tr><tr><td>Клеевой</td><td>3 мм покрытие + около 1 мм клея</td><td>Нужна почти идеальная плоскость; фактический клей — по техкарте</td></tr><tr><td>Замковый</td><td>4–6 мм покрытие + разрешённая подложка</td><td>Дополнительная подложка может быть запрещена</td></tr></table><p>Клеевой кварцвинил сильнее проявляет песчинки, волны и перепады основания. Ровность важна не меньше высоты.</p></div></details>
+    <details open><summary>Прихожая — нагревательный мат и плитка</summary><div class="body"><p>Рекомендуемый вариант: двухжильный экранированный кабельный мат ориентировочно 150 Вт/м², терморегулятор и сменный датчик пола.</p><ol><li>Прочная подготовленная стяжка.</li><li>Совместимая грунтовка.</li><li>Мат 3–5 мм.</li><li>Эластичный плиточный клей, полностью окружающий кабель без пустот.</li><li>Плитка или керамогранит.</li></ol><p>Типичный общий пирог над стяжкой — примерно 12–20 мм, но считать нужно по конкретной плитке, кабелю и инструкции клея.</p></div></details>
+  </section>
+
+  <section id="install"><div class="section-title"><h2>Монтаж: что делать и чего избегать</h2></div>
+    <div class="grid"><article class="card"><h3>Стяжку сохраняют, если она</h3><ul class="ticks"><li>не бухтит при простукивании;</li><li>не крошится и не имеет слабого верхнего слоя;</li><li>не содержит активных раскрывающихся трещин;</li><li>позволяет получить нужную отметку пола;</li><li>достаточно ровная либо пригодна под выбранный ровнитель.</li></ul><h3>Локально делают</h3><ul><li>штробу под гофротрубку датчика;</li><li>место под соединительную муфту;</li><li>канал к терморегулятору;</li><li>понижение плиточной зоны — только после расчёта и проверки скрытых коммуникаций.</li></ul></article>
+      <article class="card"><h3>Нельзя</h3><ul class="no"><li>класть плитку и мат поверх плавающего ламината;</li><li>укорачивать или пересекать нагревательный кабель;</li><li>вести кабель через деформационный шов или под профиль стыка;</li><li>класть мат под шкафы и мебель без нормального отвода тепла;</li><li>замуровывать датчик без сменной трубки;</li><li>включать систему до полного твердения клея;</li><li>использовать мягкую фольгированную подложку под плиткой.</li></ul></article></div>
+    <details><summary>Электрика и проверки</summary><div class="body"><ul><li>Защитное заземление PE и экран кабеля.</li><li>УЗО или дифавтомат с током утечки не более 30 мА.</li><li>Автомат и сечение линии по мощности и существующей нагрузке.</li><li>Сопротивление нагревателя и изоляции проверяют до раскладки, после раскладки и после плиточных работ; значения записывают в паспорт.</li><li>Сфотографируйте трассу с рулеткой до закрытия клеем.</li><li>Подключение и измерения поручите квалифицированному электрику.</li></ul></div></details>
+    <details><summary>Стык покрытий</summary><div class="body"><p>Цель — перепад готовых поверхностей около 0–1 мм. Ламинат нельзя зажимать: сохраняется компенсационный зазор. Применяют подходящий профиль, пробковый компенсатор либо предусмотренный системой эластичный шов. Нагревательный кабель заканчивается внутри плиточной зоны.</p></div></details>
+  </section>
+
+  <section id="check"><div class="section-title"><h2>Чек-лист перед работой</h2><p>Отметки сохраняются на этом устройстве.</p></div><div class="card check" id="checks">
+    <label><input type="checkbox"><span>Измерена фактическая толщина подложки под ламинатом</span></label>
+    <label><input type="checkbox"><span>Выбран конкретный клеевой или замковый кварцвинил</span></label>
+    <label><input type="checkbox"><span>Известны толщина плитки и формат</span></label>
+    <label><input type="checkbox"><span>Выбраны мат, клей, грунт и ровнитель с совместимыми инструкциями</span></label>
+    <label><input type="checkbox"><span>Снята карта лазерных отметок, включая высокие точки и стыки</span></label>
+    <label><input type="checkbox"><span>Проверена прочность, влажность и ровность стяжки</span></label>
+    <label><input type="checkbox"><span>Рассчитан минимальный слой ровнителя в самой высокой точке</span></label>
+    <label><input type="checkbox"><span>Проверены двери и запас высоты под полотнами</span></label>
+    <label><input type="checkbox"><span>Нарисована раскладка мата без мебели и швов</span></label>
+    <label><input type="checkbox"><span>Электрик проверил линию, PE и защиту 30 мА</span></label>
+  </div></section>
+
+  <section><div class="section-title"><h2>Связанные памятки и нормы</h2></div><div class="card links">
+    <a href="kvarcvinil-guide.html">Открыть существующую памятку по кварцвинилу</a>
+    <a href="index.html">Открыть существующий чек-лист инструментов</a>
+    <a href="https://base.garant.ru/405150167/c9c989f1e999992b41b30686f0032f7d/" target="_blank" rel="noopener">ГОСТ Р 70187-2022: схемы монтажа электрического тёплого пола</a>
+    <a href="https://meganorm.ru/mega_doc/norm/akt_forma/0/gost_r_70187-2022_natsionalnyy_standart_rossiyskoy.html" target="_blank" rel="noopener">ГОСТ Р 70187-2022: требования к датчику, защите и контролю</a>
+    <a href="https://www.elec.ru/library/direction/pue/razdel-7-1-7.html" target="_blank" rel="noopener">ПУЭ, глава 7.1: электробезопасность жилых зданий</a>
+  </div></section>
+  <footer>Расчётный помощник не заменяет технические карты выбранных материалов и проверку основания на месте. Перед штроблением проверьте скрытые провода и трубы.</footer>
+</main>
+<script>
+  const ids=['laserTop','laserVinyl','laserTile','vinyl','vinylGlue','vinylExtra','tile','matGlue','tileExtra'];
+  const n=id=>Number(document.getElementById(id).value)||0;
+  const fmt=x=>`${Math.round(x*10)/10} мм`;
+  function calculate(){
+    const riseV=n('laserVinyl')-n('laserTop');
+    const riseT=n('laserTile')-n('laserTop');
+    const levelV=riseV-n('vinyl')-n('vinylGlue')-n('vinylExtra');
+    const levelT=riseT-n('tile')-n('matGlue')-n('tileExtra');
+    document.getElementById('vinylResult').textContent=fmt(levelV);
+    document.getElementById('tileResult').textContent=levelT>=0?fmt(levelT):`выборка ${fmt(Math.abs(levelT))}`;
+    let notes=[];
+    if(levelV<0) notes.push('Пирог кварцвинила выше цели: нужно понизить основание или изменить слои.');
+    if(levelT<0) notes.push('Плиточный пирог выше цели: нужна выборка основания, более тонкие материалы или согласованный переход.');
+    if(levelV>=0&&levelV<3) notes.push('Очень тонкий расчётный слой под кварцвинилом: проверьте минимальную толщину ровнителя.');
+    if(levelT>=0&&levelT<3) notes.push('Очень тонкий расчётный слой под плиткой: проверьте допустимость локального выравнивания.');
+    document.getElementById('status').textContent=notes.length?notes.join(' '):'Номинальные толщины положительные. Теперь проверьте минимальный слой ровнителя в самой высокой точке и допуски техкарт.';
+    ids.forEach(id=>localStorage.setItem('floor-'+id,document.getElementById(id).value));
+  }
+  ids.forEach(id=>{const el=document.getElementById(id),saved=localStorage.getItem('floor-'+id);if(saved!==null)el.value=saved;el.addEventListener('input',calculate)});
+  const boxes=[...document.querySelectorAll('#checks input')];
+  boxes.forEach((box,i)=>{box.checked=localStorage.getItem('floor-check-'+i)==='1';box.addEventListener('change',()=>localStorage.setItem('floor-check-'+i,box.checked?'1':'0'))});
+  calculate();
+</script>
+</body>
+</html>
